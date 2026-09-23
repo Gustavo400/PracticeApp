@@ -1,5 +1,5 @@
 import { useFonts } from "expo-font";
-import { Alert, Button, StyleSheet, Text, View } from "react-native";
+import { Alert, StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 function showAlert(message: string) {
@@ -21,13 +21,8 @@ export default function Index() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <View>
-          <Text style={styles.mainText}>Nice! it updates in real time</Text>
+          <Text style={styles.mainText}>Do you know the muffin man?</Text>
         </View>
-        <Button
-          onPress={() => showAlert("Simple Button pressed")}
-          title="Test"
-          color="#007766"
-        ></Button>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -38,9 +33,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "#0090b0",
   },
-
   mainText: {
     fontFamily: "BounceDash Italic",
+    textAlign: "center",
+    fontSize: 24,
+    color: "#FFFFFF",
   },
 });
